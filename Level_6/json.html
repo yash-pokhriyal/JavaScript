@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+        let product = {
+            name:'T-shirt',
+            price:789,
+            rating:{
+                stars: 4.5,
+                noOfReviews: 453,
+            }
+        }
+        // console.log(product)
+        // console.log(typeof product)
+        // let str = JSON.stringify(product);
+        // console.log(str)
+        // console.log(typeof str)
+
+        // let newProduct = JSON.parse(str)
+        // console.log(newProduct)
+
+
+        // Local storage 
+        localStorage.setItem('Name','KG Coding')
+        localStorage.setItem('Price','8976')
+
+        console.log(localStorage.getItem('Name'));
+
+        // Only string can be stored
+
+        localStorage.setItem('product',JSON.stringify(product))
+        console.log(localStorage.getItem('product'))
+        let product2 = JSON.parse(localStorage.getItem('product'))
+        console.log(product2)
+
+        localStorage.removeItem('newUsers')
+        localStorage.removeItem('trancy-mode')
+        localStorage.clear()
+    </script>
+</body>
+</html>
+
+<!-- Json is data representation \" for extra double code in between  -->

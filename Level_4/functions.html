@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        // function :block of code
+        let age = 20;
+        console.log(`Your age is ${age}`)
+        
+        // function
+        function printAge(){
+            console.log(`Your age is ${age}`)
+        }
+        printAge();
+
+        age = 78;
+        printAge()
+
+        // function with return 
+        function generateRandomMove(){
+            let random = Math.random();
+            let randomMove = random*3;
+            return randomMove;
+        }
+        console.log(generateRandomMove())
+        let res = generateRandomMove()
+        console.log(res)
+
+        function sum(a,b){
+            let s = a+b;
+            return s 
+        }
+        console.log(sum(7,8))
+
+        function greeting(name='pyaare'){
+            console.log('Namaste '+name)
+        }
+        greeting()
+    </script>
+</body>
+</html>

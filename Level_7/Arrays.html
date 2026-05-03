@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <!-- Array is just list of values  -->
+     <script>
+     let myArray = [1,'KG coding',null,true,{likes:'1 Million'}]
+     console.log(myArray)
+     console.log(myArray[3])
+     console.log(typeof myArray)
+    //  object
+
+    // to check is it array or not 
+    console.log(Array.isArray(myArray))
+
+    // length
+    console.log(myArray.length)
+    
+    // push or pop
+    let arr = [1,2,3];
+    console.log(arr);
+    arr.push(6);
+    console.log(arr)
+    let poppedValue = arr.pop();
+    console.log(arr)
+    console.log(poppedValue)
+
+    // shift or unshift aage se add or remove
+    let arr1 = [3,5,7,5]
+   
+    // start index - kaha tk dlt 
+    arr1.splice(1,2)
+    console.log(arr1)
+
+    // toString
+    let arr2 = [1,2,5,4,11]
+    console.log(arr2.toString())
+
+    // sort alphabetically 
+    console.log(arr2.sort())
+
+    // arr2.value
+    console.log(arr2.valueOf())
+
+    let [a ,b, c]=arr2;
+    console.log(a)
+    console.log(b)
+    console.log(c)
+
+
+
+     </script>
+     
+</body>
+</html>
