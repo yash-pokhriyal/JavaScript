@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance html</title>
+</head>
+<body>
+    <button id="my-btn">Click</button>
+
+    <script>
+        // anonymous function
+        let sum = function(num1,num2){
+            return  num1+num2
+        }
+        console.log(sum(4,5));
+
+
+        // (4+5)+7
+
+        let sumThreeNo = function(num1,num2,num3,sumOfTwoNo){
+            let sum1 = sumOfTwoNo(num1,num2);
+            return sumOfTwoNo(sum1,num3);
+
+        }
+
+        console.log(sumThreeNo(3,4,5,sum))
+
+        console.log(typeof sum)
+
+
+        // Arrow function
+        let add = (a,b)=>{
+            return a+b;
+        }
+
+        let square = a => a*a;
+        console.log(square(5))
+
+        // set timeout :run one time
+        
+        let timerId = setTimeout(()=>console.log('Subeh hogyi uth jao')
+        ,2000)
+        console.log(`alarm set with ${timerId}`) 
+
+        // clearTimeout(timerId);
+        // to cancel
+
+        let intervalId = setInterval(()=>console.log('Subeh hogyi mamu'),3000)
+        setTimeout(()=>clearInterval(intervalId),10000)
+        
+    //    event listner
+    let buttonElement = document.querySelector('#my-btn');
+    buttonElement.addEventListener('click',event =>{console.log('I am clicked')})
+    
+    let printDate = event => console.log(new Date());
+    buttonElement.addEventListener('click',printDate);
+    
+    // agar direct pass hota to aur koi refernce ni hota is function ka to mai usko remove ni krpata
+    buttonElement.removeEventListener('click',printDate)
+
+    // for each loop 
+    let foods = [3,5,7,9];
+    foods.forEach(function(num){
+        console.log(num);
+    })
+
+    foods.forEach((num)=>console.log(num))
+    function search(arr,num){
+      for(let i=0;i<arr.length;i++){
+        if(arr[i]==num){
+            console.log(`Element found at :${i}`)
+            return;
+        }
+      }
+      console.log('Element was not found');
+    }
+    search(foods,5)
+
+    // in for each return work as comtinue
+    // no straighward way to breakout from this iteration
+    // when you need to perform action on each element
+
+    // Array methods
+
+    // filter
+    let arr5 = [1,2,3,4,5,6,7,8]
+    let odds = arr5.filter((num,index)=>{
+        if(num%2==0){
+            return false
+        }else{
+            return true
+        }
+    })
+    console.log(odds)
+
+    let newOdds = arr5.filter((num,index)=> num%2!=0)
+    console.log(newOdds)
+
+    // Map
+    array = [1,2,3,4,5,6]
+    let squares = array.map((num,index)=>num*num)
+    console.log(squares)
+   
+    </script>
+</body>
+</html>
+<!-- function in js first class citizen -->
